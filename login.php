@@ -3,9 +3,14 @@
 include("konfig.php");
 
 if (isset($_POST["submit"])) {
-    $ussername = $_POST["username"];
+    if (isset($_POST["username"])) {
+        $inputUser = $_POST["username"];
+    }else {
+        $inputUser = $_POST["userid"];
+    }
     $password = $_POST["password"];
-    login($ussername,$password);
+    // var_dump($inputUser);
+    login($inputUser,$password);
 }
  
 ?>
@@ -31,9 +36,16 @@ if (isset($_POST["submit"])) {
                 <h4>PT. SEJAHTERA JAYA</h4>
             </div>
             <div class="wrapper">
+                <div class="input-login">
+                    <label for="login-as">Login sebagai</label>
+                    <select name="login-as" id="login-as">
+                        <option value="Admin">Admin</option>
+                        <option value="Karyawan" selected>Karyawan</option>
+                    </select>
+                </div>
                 <div class="inputbox">
-                    <label for="">Username</label>
-                    <input type="text" placeholder="masukan username" required maxlength='32' name="username">
+                    <label for="input-user" id="label-inputUser">Username</label>
+                    <input type="text" placeholder="masukan username" required name="username" id="input-user">
                 </div>
                 <div class="inputbox">
                     <label for="">Password</label>
@@ -45,6 +57,7 @@ if (isset($_POST["submit"])) {
             </div>
         </form>
     </div>
+    <script src="JS/login.js"></script>
 </body>
 
 </html>

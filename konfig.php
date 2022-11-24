@@ -85,7 +85,7 @@ function login($ussername, $password)
                     document.location.href = 'index.php';
                 </script>
             ";
-            $_SESSION["admin"] = $row["id"];
+            $_SESSION["admin"] = $row["user_id"];
         } else {
             echo "
                 <script>

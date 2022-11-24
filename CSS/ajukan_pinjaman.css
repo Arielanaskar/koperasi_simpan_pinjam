@@ -1,218 +1,323 @@
 @font-face {
-    font-family: 'popins';
-    src: url(../Fonts/Poppins/Poppins-Light.ttf);
+  font-family: "popins";
+  src: url(../Fonts/Poppins/Poppins-Light.ttf);
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'popins';
-
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "popins";
 }
 
-
-.container{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
 
 form {
-    width: 100%;
-    height: 550px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* border: 1px solid red; */
-    background-color: #EEF2E6;
-    /* align-items: flex-end; */
+  width: 100%;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+  background-color: #eef2e6;
+  /* align-items: flex-end; */
 }
 
 .input-group {
-    width: 600px;
-    height: 380px;
-    /* border: 1px solid red; */
-    display: flex;
-    flex-wrap: wrap;
+  width: 800px;
+  height: 400px;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .input-box img {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .input-box .imgbox {
-    width: 40px;
-    height: 37px;
-    position: absolute;
-    margin-top: 27px;
-    margin-left: 1px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #d3d4d1;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+  width: 40px;
+  height: 37px;
+  position: absolute;
+  margin-top: 27px;
+  margin-left: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d3d4d1;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
-.input-box select{
-    width: 268px;
-    height: 40px;
-    padding-left: 50px;
-    outline: none;
-    border-radius: 10px;
-    border: 0,5px solid grey;
-    font-weight: bold;
+.input-box select {
+  width: 268px;
+  height: 40px;
+  padding-left: 50px;
+  outline: none;
+  border-radius: 10px;
+  border: 0, 5px solid grey;
+  font-weight: bold;
 }
 
 .input-box select option {
-    font-weight: bold;
+  font-weight: bold;
 }
-.input-box input{
-    width: 215px;
-    height: 38px;
-    padding-left: 25px;
-    outline: none;
-    font-weight: bold;
-    border-radius: 10px;
-    border: 0.5px solid grey ;
-}
-
-.input-box input:read-write{
-    padding-left: 50px;
+.input-box input {
+  width: 215px;
+  height: 38px;
+  padding-left: 25px;
+  outline: none;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 0.5px solid grey;
 }
 
-.input-box label{
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    display: block;
+.input-box input:read-write {
+  padding-left: 50px;
+}
+
+.input-box label {
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  display: block;
 }
 
 .input-box {
-    padding-left: 20px;
-    position: relative;
+  padding-left: 20px;
+  position: relative;
 }
 
-.title{
-    /* background-color: #3D8361; */
-    color: rgb(0, 0, 0);
-    padding: 18px;
-    display: block;
-    /* padding: 20px, 15px, 20px, 15px; */
+.title {
+  /* background-color: #3D8361; */
+  color: rgb(0, 0, 0);
+  padding: 18px;
+  display: block;
+  /* padding: 20px, 15px, 20px, 15px; */
 }
 
 #btn-submit {
-    width: 209px;
-    height: 40px;
-    background-color: #3D8361;
-    border: 0.5px solid black;
-    color: white;
-    margin-left: 20px;
-    cursor: pointer;
+  width: 209px;
+  height: 40px;
+  background-color: #3d8361;
+  border: 0.5px solid black;
+  color: white;
+  margin-left: 20px;
+  cursor: pointer;
 }
 
 .navbar {
-    width: 100%;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* position: fixed; */
-    color: rgb(0, 0, 0);
-    /* border: 1px solid red; */
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background-color: grey;
+  justify-content: space-between;
+  /* position: fixed; */
+  color: white;
+  /* border: 1px solid red; */
 }
 
 .navbar img {
-    width: 50px;
-    height: 50px;
-    margin-left: 10px;
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
 }
 
 .navbar ul {
-    width: 150px;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    margin-right: 170px;
-    /* border: 1px solid red; */
+  width: 150px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 170px;
+  /* border: 1px solid red; */
 }
 
 .navbar ul li a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
+  text-decoration: none;
+  color: white;
 }
 
-
 .logo {
-    height: auto;
-    display: flex;
-    width: 300px;
-    justify-content: space-around;
-    display: flex;
-    align-items: center;
-    font-size: 15px;
-    letter-spacing: 1px;
-    font-weight: 100;
+  height: auto;
+  display: flex;
+  width: 300px;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 100;
 }
 
 .user {
-    width: 170px;
-    height: 50px;
-    /* border: 1px solid sienna; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 170px;
+  height: 50px;
+  /* border: 1px solid sienna; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .user-img {
-    width: 40px;
-    height: 40px;
-    /* background-color: salmon; */
-    border-radius: 50%;
-    margin-right: 40px;
-    background-image: url(../img/man.png);
-    background-size: cover;
-    background-position: center;
+  width: 40px;
+  height: 40px;
+  /* background-color: salmon; */
+  border-radius: 50%;
+  margin-right: 40px;
+  background-image: url(../img/man.png);
+  background-size: cover;
+  background-position: center;
 }
 
 .table {
-    /* border: 1px solid red; */
-    background-color: #EEF2E6;
-    padding-top: 40px;
-    padding-bottom: 40px;
+  /* border: 1px solid red; */
+  background-color: #eef2e6;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 table {
-    width: 1300px;
-    height: 200px;
-    padding-left: 16px;
+  width: 1300px;
+  height: 200px;
+  padding-left: 16px;
 }
 
 table tr th {
-    text-align: center;
-    background-color: #FAEA48;
+  text-align: center;
+  background-color: #faea48;
 }
 
-table tr td{
-    text-align: center;
-    background-color: #EEEEEE;
+table tr td {
+  text-align: center;
+  background-color: #eeeeee;
 }
 
-.data-pengajuan{
-    /* border: 1px solid red; */
-    margin: auto;
-    /* display: none; */
+.data-pengajuan {
+  /* border: 1px solid red; */
+  margin: auto;
+  /* display: none; */
 }
 
 #cancel {
-    background-color: #DC3545;
-    border: none;
-    /* padding: 10px; */
-    width: 80px;
-    height: 40px;
-    cursor: pointer;
-    border-radius: 20px;
+  background-color: #dc3545;
+  border: none;
+  /* padding: 10px; */
+  width: 80px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+#pesan {
+  display: none;
+  font-size: 14px;
+}
+
+select#metode-pembayaran option[value="bca"] {
+  background-image: url(img/bca.png);
+}
+
+.pembayaran {
+  width: 500px;
+  height: 400px;
+  /* border: 1px solid red; */
+  box-shadow: 1px 2px 10px 0px grey;
+  position: absolute;
+  background-color: #fff;
+  /* margin: auto; */
+  margin-left: 400px;
+  margin-top: 150px;
+  padding: 30px;
+  display: none;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
+}
+
+.pembayaran form {
+  width: 500px;
+  height: 250px;
+  background-color: #fff;
+  margin-top: 40px;
+  /* border: 1px solid greenyellow; */
+}
+
+.pembayaran .header-pembayaran {
+  width: 200px;
+  margin-bottom: 20px;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pembayaran .header-pembayaran img {
+  /* margin-right: 10px; */
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.pembayaran .grup-input {
+  /* border: 1px solid black; */
+  border-radius: 10px;
+}
+
+.pembayaran .grup-input label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.pembayaran .grup-input select {
+  width: 495px;
+  /* display: flex; */
+  height: 35px;
+  border-radius: 10px;
+  border: 0.5px solid gray;
+  font-weight: bold;
+  outline: none;
+}
+
+.pembayaran .grup-input select option {
+  font-weight: bold;
+}
+
+.pembayaran .grup-input input {
+  width: 495px;
+  /* display: flex; */
+  height: 30px;
+  border-radius: 10px;
+  border: 0.5px solid gray;
+  font-weight: bold;
+  outline: none;
+  /* padding-left: 10px; */
+}
+
+.pembayaran button {
+  height: 40px;
+  margin-top: 20px;
+  border: none;
+  background-color: mediumspringgreen;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 0.5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#bayar {
+  width: 100px;
+  height: 40px;
+  /* padding: 5px; */
+  border: none;
+  background-color: mediumspringgreen;
+  cursor: pointer;
+  color: white;
 }

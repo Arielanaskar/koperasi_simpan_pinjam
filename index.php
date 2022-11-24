@@ -9,8 +9,8 @@ if (isset($_SESSION["anggota"])) {
     $users = mysqli_query($koneksi, "SELECT * FROM anggota WHERE id_anggota='$id'");
 } elseif (isset($_SESSION["admin"])) {
     $id = $_SESSION["admin"];
-    $users = mysqli_query($koneksi, "SELECT * FROM adminn WHERE id='$id'");
-}else {
+    $users = mysqli_query($koneksi, "SELECT * FROM adminn WHERE user_id='$id'");
+} else {
     $id = '';
 }
 
@@ -38,26 +38,33 @@ if (isset($_SESSION["anggota"])) {
                 </div>
                 <ul id="primary">
                     <li><a href="">Home</a></li>
-                    <li><a href="">Tentang</a></li>
+                    <li><a href="#tentang">Tentang</a></li>
                 </ul>
                 <div class="user">
                     <?php if (isset($_SESSION["anggota"])) : ?>
                         <?php foreach ($users as $user) : ?>
                             <div class="user-title">
-                                <h4><?= substr($user["username"], 0, 10) ?></h4>
+                                <div class="kotak-akun">
+                                    <h4><?= substr($user["username"], 0, 10) ?></h4>
+                                    <img src="img/panahbawah.png" alt="" srcset="" id="panahbawah">
+                                </div>
+                                <p>anggota</p>
                             </div>
-                            <div class="user-img">
-
+                            <div class="dropdown-menu" slidedown="no">
+                                <a href="acount.php">account</a>
                             </div>
                         <?php endforeach; ?>
                     <?php elseif (isset($_SESSION["admin"])) : ?>
                         <?php foreach ($users as $user) : ?>
                             <div class="user-title">
-                                <h4><?= substr($user["username"], 0, 10) ?></h4>
-                                <p>Admin</p>
+                                <div class="kotak-akun">
+                                    <h4><?= substr($user["username"], 0, 10) ?></h4>
+                                    <img src="img/panahbawah.png" alt="" srcset="" id="panahbawah">
+                                </div>
+                                <p>admin</p>
                             </div>
-                            <div class="user-img">
-
+                            <div class="dropdown-menu" slidedown="no">
+                                <a href="acount.php">account</a>
                             </div>
                         <?php endforeach; ?>
                     <?php else : ?>
@@ -112,48 +119,50 @@ if (isset($_SESSION["anggota"])) {
                     </a>
                     <a href="laporan.php" class="laporan">
                         <div class="isi">
-                             <h2 class="title2">Laporan</h2>
+                            <h2 class="title2">Laporan</h2>
                         </div>
                     </a>
                 </div>
             <?php else : ?>
-                <h1>GADA MENU</h1>
+                <div class="visi" id="tentang">
+                    <div class="title">
+                        <h2>VISI</h2>
+                    </div>
+                    <p>
+                        Menjadi koperasi yang berpredikat SEHAT dengan jumlah anggota 100.000 orang pada akhir tahun 2022
+                    </p>
+                </div>
+                <div class="misi">
+                    <div class="title">
+                        <h2>MISI</h2>
+                        <p>
+                            1. Menyediakan produk yang berkualitas dan sesuai dengan kebutuhan anggota <br>
+                            2. Meningkatkan kualitas SDM sehingga dapat memberikan pelayanan yang prima <br>
+                            3. Menerapkan tata kelola koperasi sehat yang terakreditasi <br>
+                            4. Memperluas jaringan pelayanan dengan membuka TP-TP baru dengan fasilitas memadai <br>
+                            5. Memaksimalkan semua anggota untuk berpartisipasi untuk memajukan koperasi <br>
+                        </p>
+                    </div>
+                </div>
+                <div class="tujuan">
+                    <div class="title">
+                        <h2>TUJUAN</h2>
+                        <p>
+                            Meningkatkan kesejahteraan ekonomi anggota koperasi di sekitarnya. Menjadi sokoguru dalam <br> perekonomian nasional. Membantu produsen dengan memberikan penawaran harga yang relatif lebih tinggi.
+                        </p>
+                    </div>
+                </div>
             <?php endif; ?>
         </main>
         <section>
-            <div class="visi">
-                <div class="title">
-                    <h2>VISI</h2>
-                </div>
-                <p>
-                    Menjadi koperasi yang berpredikat SEHAT dengan jumlah anggota 100.000 orang pada akhir tahun 2022
-                </p>
-            </div>
-            <div class="misi">
-                <div class="title">
-                    <h2>MISI</h2>
-                    <p>
-                        1. Menyediakan produk yang berkualitas dan sesuai dengan kebutuhan anggota <br>
-                        2. Meningkatkan kualitas SDM sehingga dapat memberikan pelayanan yang prima <br>
-                        3. Menerapkan tata kelola koperasi sehat yang terakreditasi <br>
-                        4. Memperluas jaringan pelayanan dengan membuka TP-TP baru dengan fasilitas memadai <br>
-                        5. Memaksimalkan semua anggota untuk berpartisipasi untuk memajukan koperasi <br>
-                    </p>
-                </div>
-            </div>
-            <div class="tujuan">
-                <div class="title">
-                    <h2>TUJUAN</h2>
-                    <p>
-                        Meningkatkan kesejahteraan ekonomi anggota koperasi di sekitarnya. Menjadi sokoguru dalam <br> perekonomian nasional. Membantu produsen dengan memberikan penawaran harga yang relatif lebih tinggi.
-                    </p>
-                </div>
-            </div>
+
         </section>
         <footer>
 
         </footer>
     </div>
+    <script src="JS/jquery-3.6.1.min.js"></script>
+    <script src="JS/index.js"></script>
 </body>
 
 </html>
